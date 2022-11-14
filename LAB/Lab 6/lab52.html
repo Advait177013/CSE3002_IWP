@@ -1,0 +1,39 @@
+<head>
+    <title>20BCE1143 - Ex 6</title>
+    <style>
+        input{
+            background-color: lightblue;
+        }
+        input:focus{
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    Welcome to ICICICI
+    <br>
+    Your Bank balance is: <br>
+    <input type="text" id="bal" readonly>
+    <script>
+        document.getElementById("bal").value="500";
+    </script>
+    <br>
+    Enter Value to Withdraw : <br>
+    <input type="text" id="val" onkeyup="this.value = this.value.replace(/[^0-9]/, '')">
+    <br>
+    <button onclick="myfun()">Withdraw</button>
+    <script>
+        function myfun(){
+            var x=document.getElementById("val").value;
+            var y=document.getElementById("bal").value;
+            if(y>x)
+            {
+                alert("Withdrew "+x+" money");
+                document.getElementById("bal").value=(y-x);
+            }
+            else
+                alert("Invalid Amount");
+        }
+    </script>
+
+</body>

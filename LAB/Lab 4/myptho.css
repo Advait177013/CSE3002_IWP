@@ -1,0 +1,44 @@
+body{
+    background-color:firebrick;
+}
+font{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 200%;
+    font-weight: 500;
+    color: transparent;
+    animation: effect 1.25s linear infinite;
+}
+@keyframes effect {
+    0% {
+        background: linear-gradient(
+                #00F00F, #FF0000);
+        -webkit-background-clip: text;
+    }
+    25% {
+        background: linear-gradient(
+                #0F00F0, #FFF000);
+        -webkit-background-clip: text;
+    }
+    50% {
+        background: linear-gradient(
+                #F00F00, #0FFF00);
+        -webkit-background-clip: text;
+    }
+    75% {
+        background: linear-gradient(
+                #F0F000, #00FFF0);
+        -webkit-background-clip: text;
+    }
+    100% {
+        background: linear-gradient(
+                #00F0F0, #000FFF);
+        -webkit-background-clip: text;
+    }
+}
+img{
+    border-color: black;
+    border-radius: 100px;
+    border-style: solid;
+    width: 150px;
+    height: 150px
+}

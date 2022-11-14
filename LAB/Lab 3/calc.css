@@ -1,0 +1,42 @@
+body {
+    background-color: white;
+}
+table {
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(229, 151, 35);
+    background-color: rgb(229, 151, 35);
+    border-spacing: 10px;
+}
+td {
+    text-align: center;
+    color: aliceblue;
+    column-width: 30px;
+    border-radius: 10px;
+    border-bottom: 2px;
+    border-color: black;
+    padding:10px
+}
+.vals {
+    background-color: black;
+}
+.screen {
+    background-color:aquamarine ;
+    color: aquamarine;
+}
+.operations {
+    background-color: firebrick;
+    color: black;
+}
+.mstuff {
+    background-color: darkgray;
+    color:black;
+}
+.equals {
+    background-color: orange;
+    color:black;
+}
+td:hover {
+    background-color: cyan;
+}

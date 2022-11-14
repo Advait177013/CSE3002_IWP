@@ -1,0 +1,130 @@
+<head>
+    <title>20BCE1143 - ex3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body align:auto>
+    <fieldset>
+        <legend><font face="Courier New" color="red"><b>Personal Details</b></font></legend>
+        <div id="formContainer">
+            <form id="formC">
+                <div class="rows">
+                    <div class="column">
+                        <label class="theLabels">
+                  
+                          Name:
+                      </label>
+                        <input class="theInputs" type="text" id="name" name="name">
+                    </div>
+                    <div class="column">
+                        <label class="theLabels">
+                  
+                          Password:
+                      </label>
+                        <input class="theInputs" type="password" id="pass" name="pass">
+                    </div>
+                    <div class="column">
+                        <label class="theLabels">
+                  
+                          Email Id:
+                      </label>
+                        <input class="theInputs" type="email" id="email" name="email">
+                    </div>
+                    <div class="column">
+                        <label class="theLabels">
+                  
+                          Gender:
+                      </label>
+                      <input type="radio" id="supreme" name="topping" value="Supreme">
+                      <label for="supreme">Supreme</label>
+                      <input type="radio" id="veg" name="topping" value="Vegetarian">
+                      <label for="veg">Vegetarian</label>
+                    </div>
+                    <div class="column">
+                        <label class="theLabels">
+                  
+                          DOB:
+                      </label>
+                        <input class="theInputs" type="text" id="dob" name="dob" value="mm/dd/yyyy">
+                    </div>
+                    <div class="column">
+                        <label class="theLabels">
+                  
+                          Mobile#:
+                      </label>
+                        <input class="theInputs" type="text" id="mob" name="mob">
+                    </div>
+                  
+                  </div>
+            </form>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend><font face="Courier New" color="red"><b>Educational Qualification</b></font></legend>
+        <form>
+            <label for="degree">Degree:</label>
+            <select name="degree" id="Degree" size="6" multiple>
+                <optgroup label="--Select Group--">
+
+                </optgroup>
+                <optgroup label="UG">
+                <option value="BE">BE</option>
+                <option value="BTech">Btech</option>
+                <option value="BSc">BSc</option>
+                <option value="BA">BA</option>
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="Other">Other</option>
+                </optgroup>
+
+                <optgroup label="PG">
+                <option value="ME">ME</option>
+                <option value="MTech">Mtech</option>
+                <option value="MSc">MSc</option>
+                <option value="MA">MA</option>
+                <option value="MCA">MCA</option>
+                <option value="MBA">MBA</option>
+                <option value="Other">Other</option>
+                </optgroup>
+
+                <optgroup label="PhD">
+                <option value="Eng">Engineering</option>
+                <option value="Sci">Science</option>
+                <option value="Mgmt">Management</option>
+                <option value="Other">Other</option>
+                </optgroup>
+            </select>
+
+            <label for="Engine">Engineering:</label>
+            <select name="Engine" id="Engine" size="6">
+                <optgroup label="--Select Group--">
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Mechanical">Mechanical</option>
+                </optgroup>        
+            </select>
+        </form>
+    </fieldset>
+    <form>
+        Hobbies:
+        <input type="checkbox" id="Chess" name="Chess" value="Chess">
+        <label for="Chess">Playing Chess</label>
+        <input type="checkbox" id="Books" name="Books" value="Books">
+        <label for="Books"> Reading Books</label><br>
+
+        <label for="favcolor">Favorite color:</label>
+        <input type="color" id="favcolor" name="favcolor" value="#fffff"><br><br>
+    </form>
+
+    
+    <font face="Courier New" color="red"><b>Address</b></font><br>
+    <textarea name="adr" cols="80" rows="4"></textarea>
+
+    <form>
+        <label for="myfile">Attach Your Resume:</label>
+        <input type="file" id="myfile" name="myfile"><br><br>
+        <input type="submit">
+    </form>
+
+</body>

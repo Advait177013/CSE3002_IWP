@@ -1,0 +1,19 @@
+<head>
+    <title>20BCE1143 - Ex 4</title>
+</head>
+<body>
+    Enter Register Number : 
+    <form id="myf">
+        <input type="text" name="hrsWorked" value="Enter Number">
+        <br>
+    </form><br>
+    <button onclick="calc()">Submit</button>
+    <p id="demo"></p>
+    <script>
+        function calc()
+        {
+            var p="<table style=\"border:red 10px solid\"><tr><td><b>"+document.getElementById("myf").elements[0].value+"</b></td></tr></table>";
+            document.getElementById("demo").innerHTML=p;
+        }
+    </script>
+</body>

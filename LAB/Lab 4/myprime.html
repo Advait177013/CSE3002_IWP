@@ -1,0 +1,38 @@
+<head>
+    <title>20BCE1143 - Ex 4</title>
+    
+</head>
+<body>
+    Enter Number upto which you want prime numbers : 
+    <form id="myf">
+        <input type="text" name="hrsWorked" value="Enter Number">
+        <br>
+    </form><br>
+    <button onclick="calc()">Submit</button>
+    <p id="demo"></p>
+    <script>
+        function calc()
+        {
+            var op="<table style=\"border:orange 1px solid\"><tr><td>";
+            var x=document.getElementById("myf");
+            var i=parseInt(x.elements[0].value);
+            for(var p=2; p<=i; p++)
+            {
+                var flag=0;
+                for(var k=1; k<(p/2+1); k++)
+                {
+                    if(k==1)
+                        continue;
+                    if(p%k==0)
+                    {
+                        flag=1;
+                        break;
+                    }               
+                }
+                if(!flag)
+                op=op+p+"</td></tr><tr><td>";
+            }
+            op=op+"</table>";
+            document.getElementById("demo").innerHTML=op+"<br>"
+        }
+    </script>

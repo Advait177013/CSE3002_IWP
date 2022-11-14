@@ -1,0 +1,26 @@
+<head>
+    <title>20BCE1143 - Ex 4</title>
+    
+</head>
+<body>
+    Rate Per Hour : ₹45<br>
+    Labour Cost : Rate Per Hour * Hours Worked<br>
+    Enter Labour Cost : 
+    <form id="myf">
+        <input type="text" name="hrsWorked" value="Enter Number">
+        <br>
+        Enter Material Cost :<br>
+        <input type="text" name="matCost" value="Enter Material Cost">
+    </form><br>
+    <button onclick="calc()">Submit</button>
+    <p id="demo"></p>
+    <script>
+        function calc()
+        {
+            var x=document.getElementById("myf");
+            var i=parseInt(x.elements[0].value)*45 + parseInt(x.elements[1].value);
+            var text1="Payable Total Labour Cost is : "+i+"</br>";
+            document.getElementById("demo").innerHTML=text1;
+        }
+    </script>
+</body>

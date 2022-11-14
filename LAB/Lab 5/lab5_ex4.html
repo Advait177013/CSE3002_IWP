@@ -1,0 +1,51 @@
+<head>
+    <title>20BCE1143 - Ex 5</title>
+
+</head>
+<body>
+    <script>
+        const seats=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    </script>
+    <form>
+        <label for="seats">
+            Enter the Seat Number you want to select : <br>
+            1) Premium Seats are number 1-5<br>
+            2) Standard Seats are number 6-10<br>
+        </label><br>
+        <input type="text" name="seats" id="seats" value="0"><br>
+        <label for="name">Enter Your Name :</label><br>
+        <input type="text" name="Name" id="name" value=""><br>
+    </form>
+    <p id="seat_disp">
+        Seats Selected : 
+    </p><br>
+    <button type="button" onclick="calc()">Select Seat</button>
+    <script>
+        function calc(){
+            var sel_seat=document.getElementById("seats").value;
+            if(sel_seat<=0 || sel_seat>10 || sel_seat%1!=0)
+                alert("Enter Valid Values");
+            else if(!seats[sel_seat] && sel_seat>5)
+            {
+                seats[sel_seat]=1;
+                alert("Booked Economy Seat "+sel_seat);
+                document.getElementById("seat_disp").append(" "+sel_seat);
+            }
+            else if(seats[sel_seat] && sel_seat>5)
+            {
+                alert("Seat is already booked. Please Select Another Seat or Try Premium Seats");
+            }
+            else if(!seats[sel_seat])
+            {
+                seats[sel_seat]=1;
+                alert("Booked Premium Seat "+sel_seat);
+                document.getElementById("seat_disp").append(" "+sel_seat);
+            }
+            else if(seats[sel_seat])
+            {
+                alert("Seat is already booked. Please Select Another Seat or Try Economy Seats");
+            }
+            document.getElementById("seat_disp").append(" "+document.getElementById("name").value);
+        }
+    </script>
+</body>

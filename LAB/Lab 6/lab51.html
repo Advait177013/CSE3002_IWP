@@ -1,0 +1,79 @@
+<head>
+    <title>20BCE1143 - Ex 6</title>
+    <style>
+        input{
+            background-color: lightblue;
+        }
+        input:focus{
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    Welcome
+    <br>
+    <script>
+        var table = document.createElement('table');
+        table.id="mytable";
+        for (var i = 1; i < 3; i++){
+            var tr = document.createElement('tr');   
+
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+
+            var text1 = document.createTextNode('Text1');
+            var text2 = document.createTextNode('Text2');
+
+            td1.appendChild(text1);
+            td2.appendChild(text2);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+
+            table.appendChild(tr);
+        }
+        document.body.appendChild(table);
+    </script>
+    Enter Colour : <br>
+    <p id="demo"></p>
+    
+    <br>
+    <script>
+        const tbx = document.createElement("input");
+        tbx.type="text";
+        tbx.id="tbx";
+        tbx.oninput=function(){myfun()};
+        document.body.appendChild(tbx);
+    </script>
+    <script>
+        function myfun() {
+        var x = document.getElementById("tbx").value;
+        document.getElementById("demo").innerHTML = "You wrote: " + x;
+        }
+    </script>
+    <br><br>
+    <script>
+        const btn = document.createElement("button");
+        btn.id="btn";
+        btn.onclick=function(){myfun2()};
+        btn.onmouseover=function(){myfun3()};
+        btn.onmouseout=function(){myfun4()};
+        btn.innerHTML = "Hello Button";
+        document.body.appendChild(btn);
+    </script>
+    <script>
+        function myfun2() {
+            var x = document.getElementById("tbx").value;
+            document.getElementById("mytable").setAttribute("style", "background-color:red;");
+        }
+    </script>
+    <script>
+        function myfun3() {
+            document.getElementById("btn").setAttribute("style", "background-color:azure;");
+        }
+    </script>
+    <script>
+        function myfun4() {
+            document.getElementById("btn").setAttribute("style", "background-color:lightgray;");
+        }
+    </script>
+</body>

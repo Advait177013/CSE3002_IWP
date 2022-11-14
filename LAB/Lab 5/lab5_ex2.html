@@ -1,0 +1,42 @@
+<head>
+    <title>20BCE1143 - Ex 5</title>
+
+</head>
+<body>
+    <script>
+        const temp=[55,62,68,74,59,45,41,58,60,67,65,78,82,88,91,92,90,93,87,80,78,79,72,68,61,59,55,65];
+    </script>
+    Temperatures in Delhi (in Fahrenheit) : 
+    <br>
+    <p id="temp_disp"></p><br>
+    <script>
+    document.getElementById("temp_disp").innerHTML = temp;
+    </script>
+    Table for Day Temp : 
+    <p id="table"></p>
+    Days on which temp is High (85+) : <br>
+    <p id="hightemp"></p><br>
+    Days on which temp is Medium (60-84) : <br>
+    <p id="medtemp"></p><br>
+    Days on which temp is Cold (60-) : <br>
+    <p id="lowtemp"></p><br>
+    <script>
+        var h=0;
+        var m=0;
+        var l=0;
+        for(let i=0; i<temp.length; i++)
+        {
+            x=temp[i];
+            if(x>=85)
+                h=h+1;
+            else if(x>60)
+                m=m+1;
+            else
+                l=l+1;
+        }
+        document.getElementById("table").innerHTML = "<table border=\"10px black solid\"><tr><td>Hot</td><td>"+h+"</td></tr><tr><td>Mild</td><td>"+m+"</td></tr><tr><td>Hot</td><td>"+l+"</td></tr></table>"
+        document.getElementById("hightemp").innerHTML = h;
+        document.getElementById("medtemp").innerHTML = m;
+        document.getElementById("lowtemp").innerHTML = l;
+    </script>
+</body>

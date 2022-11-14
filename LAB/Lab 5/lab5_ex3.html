@@ -1,0 +1,96 @@
+<head>
+    <title>20BCE1143 - Ex 5</title>
+
+</head>
+<body>
+
+    <script>
+        function calc(){
+            var pounds=document.getElementById("pnds").value;
+            var feet = document.getElementById("feet").value;
+            var inch = document.getElementById("inch").value;
+            var gender = document.getElementById("gender").value;
+            if(pounds <= 0)
+                alert("Enter weight");
+            if(feet <= 0)
+                alert("Enter Height");
+            //document.getElementById("demo").innerHTML=gender;
+            var bmi_res = 703*pounds/((feet*12+inch)^2);
+            //document.getElementById("demo").innerHTML=bmi;
+            var bmi="";
+            if(bmi_res<17.50)
+                bmi=bmi+"Anorexia";
+            else if(gender=="F")
+            {
+                if(bmi_res<19.10)
+                    bmi=bmi+"Underweight";
+                else if(bmi_res<25.80)
+                    bmi=bmi+"Ideal";
+                else if(bmi_res<27.30)
+                    bmi=bmi+"Marginally Overweight";
+                else if(bmi_res<32.30)
+                    bmi=bmi+"Overweight";
+                else
+                    bmi=bmi+"Obese";
+            }
+            else
+            {
+                if(bmi_res<20.70)
+                    bmi=bmi+"Underweight";
+                else if(bmi_res<26.40)
+                    bmi=bmi+"Ideal";
+                else if(bmi_res<27.80)
+                    bmi=bmi+"Marginally Overweight";
+                else if(bmi_res<31.10)
+                    bmi=bmi+"Overweight";
+                else
+                    bmi=bmi+"Obese";
+            }
+                document.getElementById("bmi_res").value=bmi;
+        }
+    </script>
+    <p id="demo"></p>
+
+    <table border="10px black solid">
+
+    <tr><td colspan="2">
+        <b>BMI Calculator</b>
+    <select name="gender" id="gender">
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+    </select>
+    </td></tr>
+
+    <tr><td colspan="2">
+        <b>Enter Your Weight : </b><br>
+        <form>
+            <label for="pnds">(in pounds)</label>
+            <input type="text" name="pnds" id="pnds" value="0"><br>
+        </form>
+    </td></tr>
+
+    <tr><td colspan="2">
+        <b>Enter Your Height : </b><br>
+        <form>
+            <label for="feet">(in feet)</label>
+            <input type="text" name="feet" id="feet" value="0"><br>
+            <label for="inch">(in inches)</label>
+            <input type="text" name="inch" id="inch" value="0"><br>
+        </form>
+    </td></tr>
+
+    <tr><td colspan="2">
+        <button type="button" onclick="calc()">Submit</button>
+    </td></tr>
+
+    <tr><td>
+        <b>Your BMI</b>
+    </td>
+    <td>
+        <form>
+            <input type="text" name="bmi_res" id="bmi_res" value="">
+        </form>
+    </td></tr>
+
+    </table>    
+</body>
